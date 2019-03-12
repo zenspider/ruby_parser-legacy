@@ -4,6 +4,7 @@ require "rubygems"
 require "hoe"
 
 Hoe.add_include_dirs File.expand_path "../lib" # HACK: to work with drop_legacy
+Hoe.add_include_dirs File.expand_path "../sexp_processor/lib" # HACK
 
 Hoe.plugin :isolate
 Hoe.plugin :seattlerb

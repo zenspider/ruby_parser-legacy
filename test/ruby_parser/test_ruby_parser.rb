@@ -5,8 +5,6 @@
 require "minitest/autorun"
 require "ruby_parser/legacy/ruby_parser"
 
-$:.unshift File.expand_path("~/Work/p4/zss/src/sexp_processor/dev/lib")
-
 require "pt_testcase"
 
 class Sexp
