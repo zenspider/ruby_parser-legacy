@@ -5,23 +5,28 @@ rdoc :: http://docs.seattlerb.org/legacy
 
 == DESCRIPTION:
 
-FIX (describe your package)
+ruby_parser-legacy includes the ruby 1.8 and 1.9 parsers from
+ruby_parser (now removed) and plugs them into the existing system.
 
 == FEATURES/PROBLEMS:
 
-* FIX (list of features or problems)
+* Drop in compatibility via one require
 
 == SYNOPSIS:
 
-  FIX (code sample of usage)
+  require "ruby_parser/legacy"
+
+  rp = RubyParser.new
+  rp.parse File.read "very_old_ruby.rb"
+  # ... as usual ...
 
 == REQUIREMENTS:
 
-* FIX (list of requirements)
+* ruby_parser 3.13+
 
 == INSTALL:
 
-* sudo gem install legacy
+* [sudo] gem install ruby_parser-legacy
 
 == LICENSE:
 
