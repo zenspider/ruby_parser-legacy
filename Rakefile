@@ -3,9 +3,6 @@
 require "rubygems"
 require "hoe"
 
-Hoe.add_include_dirs File.expand_path "../lib" # HACK: to work with drop_legacy
-Hoe.add_include_dirs File.expand_path "../sexp_processor/lib" # HACK
-
 Hoe.plugin :isolate
 Hoe.plugin :seattlerb
 Hoe.plugin :rdoc
@@ -13,15 +10,11 @@ Hoe.plugin :racc
 
 V1 = %w[18 19]
 
-Hoe.spec "legacy" do
+Hoe.spec "ruby_parser-legacy" do
   developer "Ryan Davis", "ryand-ruby@zenspider.com"
 
-  # HACK: until I merge in drop_legacy branch to master and release it:
-  # dependency "ruby_parser", "~> 3.12"
-  # TODO: remove when above is uncommented:
-  dependency "sexp_processor", "~> 4.9"
-  dependency "rake", "< 11", :developer
-  dependency "oedipus_lex", "~> 2.5", :developer
+  dependency "ruby_parser", "~> 3.13"
+  dependency "oedipus_lex", "~> 2.5", :developer # doesn't come in from RP
 
   license "MIT"
 
