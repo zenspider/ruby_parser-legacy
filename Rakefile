@@ -8,8 +8,6 @@ Hoe.plugin :seattlerb
 Hoe.plugin :rdoc
 Hoe.plugin :racc
 
-V1 = %w[18 19]
-
 Hoe.spec "ruby_parser-legacy" do
   developer "Ryan Davis", "ryand-ruby@zenspider.com"
 
@@ -26,6 +24,8 @@ Hoe.spec "ruby_parser-legacy" do
 end
 
 base = "lib/ruby_parser/legacy"
+V1 = %w[18 19]
+
 V1.each do |n|
   file "#{base}/ruby#{n}_parser.rb" => "#{base}/ruby#{n}_parser.y"
 end
