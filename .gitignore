@@ -1,4 +1,5 @@
 /tmp/
+/pkg/
 lib/ruby_parser/legacy/ruby*_parser.output
 lib/ruby_parser/legacy/ruby18_parser.rb
 lib/ruby_parser/legacy/ruby19_parser.rb
