@@ -4,9 +4,12 @@ require "rubygems"
 require "hoe"
 
 Hoe.plugin :isolate
-Hoe.plugin :seattlerb
+Hoe.plugin :seattlerb # - perforce
 Hoe.plugin :rdoc
 Hoe.plugin :racc
+Hoe.plugin :git
+
+Hoe.plugins.delete :perforce
 
 Hoe.spec "ruby_parser-legacy" do
   developer "Ryan Davis", "ryand-ruby@zenspider.com"
