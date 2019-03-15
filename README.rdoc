@@ -1,7 +1,7 @@
 = legacy
 
-home :: https://github.com/seattlerb/legacy
-rdoc :: http://docs.seattlerb.org/legacy
+home :: https://github.com/zenspider/ruby_parser-legacy
+rdoc :: http://docs.seattlerb.org/ruby_parser-legacy
 
 == DESCRIPTION:
 

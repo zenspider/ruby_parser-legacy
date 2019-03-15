@@ -30,4 +30,12 @@ V1.each do |n|
   file "#{base}/ruby#{n}_parser.rb" => "#{base}/ruby#{n}_parser.y"
 end
 
+base = "lib/ruby_parser/legacy/ruby_lexer.rex"
+file "#{base}.rb" => "#{base}"
+file "#{base}.rb" => :isolate
+
+task :clean do
+  rm_rf Dir["lib/**/*.output"]
+end
+
 # vim: syntax=ruby
