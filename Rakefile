@@ -4,12 +4,11 @@ require "rubygems"
 require "hoe"
 
 Hoe.plugin :isolate
-Hoe.plugin :seattlerb # - perforce
+# Hoe.plugin :seattlerb # - perforce
+Hoe.plugin :minitest, :history, :email
 Hoe.plugin :rdoc
 Hoe.plugin :racc
 Hoe.plugin :git
-
-Hoe.plugins.delete :perforce
 
 Hoe.spec "ruby_parser-legacy" do
   developer "Ryan Davis", "ryand-ruby@zenspider.com"
@@ -23,6 +22,12 @@ Hoe.spec "ruby_parser-legacy" do
     self.racc_flags << " -t" if ENV["DEBUG"]
     self.racc_flags << " --superclass RubyParser::Legacy::RubyParser"
     # self.racc_flags << " --runtime ruby_parser" # TODO: broken in racc
+  end
+
+  if plugin? :publish then
+    # copied from hoe-seattlerb:
+    base = "/data/www/docs.seattlerb.org"
+    rdoc_locations << "docs-push.seattlerb.org:#{base}/#{remote_rdoc_dir}"
   end
 end
 
